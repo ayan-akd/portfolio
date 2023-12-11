@@ -3,6 +3,7 @@ import React from "react";
 import { NextUIProvider } from "@nextui-org/react";
 import NavbarC from "@/Components/NavbarC";
 import Footer from "@/Components/Footer";
+import { Toaster } from "react-hot-toast";
 
 export default function Providers({ children }) {
   return (
@@ -11,6 +12,7 @@ export default function Providers({ children }) {
         <NavbarC></NavbarC>
         {children}
         <Footer></Footer>
+        <Toaster />
       </div>
     </NextUIProvider>
   );

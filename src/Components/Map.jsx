@@ -1,9 +1,26 @@
 /* eslint-disable react/prop-types */
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), {
+  ssr: false, // Disable server-side rendering
+});
 
 const Map = ({ position, popUp }) => {
+  const [leafletLoaded, setLeafletLoaded] = useState(false);
+
+  useEffect(() => {
+    setLeafletLoaded(true);
+  }, []);
+
+  if (!leafletLoaded) {
+    return null; // or a loading indicator
+  }
+
+  const { Marker, Popup, TileLayer } = require("react-leaflet");
+  const L = require("leaflet");
   const icon = L.icon({ iconUrl: "/images/marker-icon.png" });
+
   return (
     <MapContainer
       center={position}

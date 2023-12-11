@@ -7,8 +7,6 @@ const password = process.env.EMAIL_Pass;
 export const POST = async (req) => {
   try {
     const { name, email, message } = await req.json();
-    console.log(name, email, message);
-
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -21,7 +19,7 @@ export const POST = async (req) => {
     const mailOptions = {
       from: email,
       to: localEmail,
-      subject: "New Contact From Portfolio",
+      subject: ` New Contact From Portfolio by ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
 

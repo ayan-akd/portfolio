@@ -3,7 +3,8 @@ import CustomContainer from "@/Components/CustomContainer";
 import Map from "@/Components/Map";
 import { Button, Input, Textarea } from "@nextui-org/react";
 import React from "react";
-
+import toast from "react-hot-toast";
+import "leaflet/dist/leaflet.css"; 
 const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,10 +24,11 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        console.log("Email sent successfully!");
+        toast.success("Email sent successfully!");
         // You can redirect the user or show a success message
       } else {
         console.error("Email could not be sent:", response.statusText);
+        toast.error("Email could not be sent!");
         // Handle the error (e.g., show an error message to the user)
       }
     } catch (error) {
