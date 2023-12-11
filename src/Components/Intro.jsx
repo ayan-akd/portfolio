@@ -5,7 +5,7 @@ import photo from "./../assets/profile-pic.png";
 import FileSaver from "file-saver";
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
-import { MdOutlineFileDownload } from "react-icons/md";
+import { MdOutlineFileDownload,MdContactPhone } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 const Intro = () => {
@@ -31,9 +31,8 @@ const Intro = () => {
             <h3 className="text-4xl font-semibold mt-2">
               A MERN Stack Developer
             </h3>
-            <div className="flex lg:justify-start justify-center items-center gap-1">
+            <div className="flex lg:justify-start flex-wrap justify-center items-center gap-1 my-5">
               <Button
-                className="my-5"
                 color="primary"
                 onClick={handleDownloadClick}
               >
@@ -42,11 +41,18 @@ const Intro = () => {
               </Button>
               <Link href={'/projects'}>
                 <Button
-                  className="my-5"
                   color="primary"
                 >
                   See Projects
                   <FaArrowRight />
+                </Button>
+              </Link>
+              <Link href={'/contact'}>
+                <Button
+                  color="primary"
+                >
+                  <MdContactPhone />
+                  Contact
                 </Button>
               </Link>
             </div>

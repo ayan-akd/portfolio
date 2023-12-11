@@ -43,7 +43,7 @@ const Slider = ({images}) => {
 
   return (
     <>
-      <div ref={sliderRef} className="keen-slider my-auto h-auto object-cover absolute">
+      <div ref={sliderRef} className="keen-slider max-w-screen-2xl mx-auto my-auto h-auto object-cover absolute">
         <div className="keen-slider__slide number-slide1 mx-auto"><Image className="h-[300px] md:h-[500px] lg:h-[800px]" src={img1} alt="" /></div>
         <div className="keen-slider__slide number-slide1 mx-auto"><Image className="h-[300px] md:h-[500px] lg:h-[800px]" src={img2} alt="" /></div>
         <div className="keen-slider__slide number-slide1 mx-auto"><Image className="h-[300px] md:h-[500px] lg:h-[800px]" src={img3} alt="" /></div>
