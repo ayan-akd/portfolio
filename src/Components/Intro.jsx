@@ -8,17 +8,17 @@ import { Button } from "@nextui-org/react";
 import { MdOutlineFileDownload } from "react-icons/md";
 const Intro = () => {
   const handleDownloadClick = () => {
-    // const dummyAnchor = document.createElement("a");
-    // dummyAnchor.download = "Ayan_Kumar_Das_Resume.pdf";
-    // dummyAnchor.href =
-    //   "https://drive.usercontent.google.com/download?id=1bS_XY8-sQIApl6hg1LVmMSatbI4OcNaM";
-    // document.body.appendChild(dummyAnchor);
-    // dummyAnchor.click();
-    // document.body.removeChild(dummyAnchor);
-    FileSaver.saveAs(
-      `${process.env.REACT_APP_CLIENT_URL}/resume.pdf`,
-      "Ayan_Kumar_Das_Resume.pdf"
-    );
+    const dummyAnchor = document.createElement("a");
+    dummyAnchor.download = "Ayan_Kumar_Das_Resume.pdf";
+    dummyAnchor.href =
+      "https://drive.usercontent.google.com/download?id=1bS_XY8-sQIApl6hg1LVmMSatbI4OcNaM";
+    document.body.appendChild(dummyAnchor);
+    dummyAnchor.click();
+    document.body.removeChild(dummyAnchor);
+    // FileSaver.saveAs(
+    //   `${process.env.REACT_APP_CLIENT_URL}/static/resume.pdf`,
+    //   "Ayan_Kumar_Das_Resume.pdf"
+    // );
   };
   return (
     <div className="text-white mt-12 md:mt-20 bg-gradient-to-r from-gray-800 via-gray-900 to-black">
