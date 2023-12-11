@@ -18,7 +18,7 @@ const NavbarC = () => {
   const menuItems = [
     { label: "Main", to: "/" },
     { label: "Projects", to: "/projects" },
-    { label: "Blogs", to: "/blogs" },
+    { label: "Contact me", to: "/contact" },
   ];
   return (
     <Navbar

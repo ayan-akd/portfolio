@@ -6,6 +6,8 @@ import FileSaver from "file-saver";
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
 import { MdOutlineFileDownload } from "react-icons/md";
+import { FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
 const Intro = () => {
   const handleDownloadClick = () => {
     const dummyAnchor = document.createElement("a");
@@ -26,15 +28,28 @@ const Intro = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-20 ">
           <div className="md:order-1 order-2 text-center md:text-start lg:pl-20">
             <h1 className="text-5xl font-bold">Hi, I'm Ayan Kumar Das</h1>
-            <h3 className="text-4xl font-semibold mt-2">A MERN Stack Developer</h3>
-            <Button
-              className="my-5"
-              color="primary"
-              onClick={handleDownloadClick}
-            >
-              <MdOutlineFileDownload />
-              Download Resume
-            </Button>
+            <h3 className="text-4xl font-semibold mt-2">
+              A MERN Stack Developer
+            </h3>
+            <div className="flex lg:justify-start justify-center items-center gap-1">
+              <Button
+                className="my-5"
+                color="primary"
+                onClick={handleDownloadClick}
+              >
+                <MdOutlineFileDownload />
+                Download Resume
+              </Button>
+              <Link href={'/projects'}>
+                <Button
+                  className="my-5"
+                  color="primary"
+                >
+                  See Projects
+                  <FaArrowRight />
+                </Button>
+              </Link>
+            </div>
           </div>
           <div className="md:order-2 order-1 flex items-center justify-center">
             <Image className="rounded-full lg:w-3/4" src={photo} alt="" />
