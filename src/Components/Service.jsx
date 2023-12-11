@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import CustomContainer from "@/Components/CustomContainer";
 import React from "react";
-
+import { motion } from "framer-motion";
 const Services = () => {
   return (
     <div className="text-white bg-gradient-to-r from-gray-800 via-gray-900 to-black">
@@ -55,7 +55,10 @@ const Services = () => {
         </h1>
         <div className="bg-gradient-to-r from-gray-800 via-gray-900 to-black">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-center justify-center mb-12">
-            <div className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-72 flex flex-col items-center justify-center">
+            <motion.div
+              whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+              className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-72 flex flex-col items-center justify-center"
+            >
               <h1 className="font-bold text-3xl">{"</>"}</h1>
               <h3 className="text-2xl my-2">Web Design</h3>
               <p className="text-gray-300">
@@ -64,8 +67,11 @@ const Services = () => {
                 convert any psd or Figma file into mobile or tab responsive web
                 application.
               </p>
-            </div>
-            <div className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-72 flex flex-col items-center justify-center">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+              className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-72 flex flex-col items-center justify-center"
+            >
               <h1 className="font-bold text-3xl">{"</>"}</h1>
               <h3 className="text-2xl my-2">Frontend Web Development</h3>
               <p className="text-gray-300">
@@ -73,8 +79,11 @@ const Services = () => {
                 interactive websites that seamlessly integrate functionality and
                 aesthetics.
               </p>
-            </div>
-            <div className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-72 flex flex-col items-center justify-center">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+              className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-72 flex flex-col items-center justify-center"
+            >
               <h1 className="font-bold text-3xl">{"</>"}</h1>
               <h3 className="text-2xl my-2">Full Stack Development</h3>
               <p className="text-gray-300">
@@ -82,7 +91,7 @@ const Services = () => {
                 Proficient in implementing Mongo DB database. More than 6 months
                 of experience with Full Stack development.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </CustomContainer>

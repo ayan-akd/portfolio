@@ -1,5 +1,4 @@
 "use client"
-import Contact from '@/Components/Contact';
 import Intro from '@/Components/Intro';
 import Services from '@/Components/Service';
 import Skills from '@/Components/Skills';
