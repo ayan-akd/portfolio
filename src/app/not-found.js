@@ -1,6 +1,5 @@
 "use client"
 import CustomContainer from '@/Components/CustomContainer'
-import NavbarC from '@/Components/NavbarC'
 import { Button } from '@nextui-org/react'
 import Lottie from 'lottie-react'
 import Link from 'next/link'
