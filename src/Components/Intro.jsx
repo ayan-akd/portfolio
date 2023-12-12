@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client"
 import React from "react";
 import CustomContainer from "./CustomContainer";
 import photo from "./../assets/profile-pic.png";

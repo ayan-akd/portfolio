@@ -1,3 +1,4 @@
+"use client"
 import CustomContainer from "./CustomContainer";
 import html from "./../assets/icons/html.png";
 import css from "./../assets/icons/css.png";

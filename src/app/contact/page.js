@@ -5,6 +5,7 @@ import { Button, Input, Textarea } from "@nextui-org/react";
 import React from "react";
 import toast from "react-hot-toast";
 import "leaflet/dist/leaflet.css"; 
+import { Helmet } from "react-helmet-async";
 const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,6 +38,9 @@ const Contact = () => {
   };
   return (
     <div className="bg-gradient-to-r from-gray-800 via-gray-900 to-black">
+      <Helmet>
+        <title>Portfolio | Contact Me</title>
+      </Helmet>
       <CustomContainer>
         <h1 className="text-white text-center text-2xl mt-16 font-bold">
           Get in Touch

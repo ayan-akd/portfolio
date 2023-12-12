@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client"
 import CustomContainer from "@/Components/CustomContainer";
 import React from "react";
 import { motion } from "framer-motion";

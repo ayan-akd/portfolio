@@ -1,3 +1,4 @@
+"use client"
 import CustomContainer from "@/Components/CustomContainer";
 import ProjectsCard from "@/Components/ProjectsCard";
 import medi1 from "@/assets/medi/image_66.png";
@@ -10,6 +11,7 @@ import techno1 from "@/assets/techno/image_72.png";
 import techno2 from "@/assets/techno/image_73.png";
 import techno3 from "@/assets/techno/image_74.png";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const Projects = () => {
   const mediImages = {
@@ -87,6 +89,9 @@ const Projects = () => {
   }
   return (
     <div className="bg-gradient-to-r from-gray-800 via-gray-900 to-black">
+      <Helmet>
+        <title>Portfolio | Projects</title>
+      </Helmet>
       <CustomContainer>
         <h1 className="text-white text-center text-5xl mt-16 pb-12 font-bold">
           My Projects
