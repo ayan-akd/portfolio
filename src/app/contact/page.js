@@ -4,10 +4,17 @@ import Map from "@/Components/Map";
 import { Button, Input, Textarea } from "@nextui-org/react";
 import React from "react";
 import toast from "react-hot-toast";
-import "leaflet/dist/leaflet.css"; 
+import "leaflet/dist/leaflet.css";
 import { Helmet } from "react-helmet-async";
 import Image from "next/image";
-import photo from "@/assets/image_75.png"
+import photo from "@/assets/image_75.png";
+import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import {
+  MdEmail,
+  MdOutlinePhoneInTalk,
+  MdOutlineLocationOn,
+} from "react-icons/md";
+
 const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +24,6 @@ const Contact = () => {
     const message = form.message.value;
     const payload = { name, email, message };
     try {
-        console.log("Payload:", payload);
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -50,20 +56,21 @@ const Contact = () => {
           Get in Touch
         </h1>
         <h1 className="text-white text-center text-5xl font-bold">
-          Let’s discuss about a <span className="text-pinky font-bold">project!</span>
+          Let’s discuss about a{" "}
+          <span className="text-pinky font-bold">project!</span>
         </h1>
         {/* profile section  */}
         <div className="w-full my-12 flex justify-center ">
-        <div className="h-56 w-72 absolute flex justify-center items-center">
-          <Image
-            className="object-cover h-20 w-20 rounded-full"
-            src={photo}
-            alt=""
-          />
-        </div>
+          <div className="h-56 w-72 absolute flex justify-center items-center">
+            <Image
+              className="object-cover h-20 w-20 rounded-full"
+              src={photo}
+              alt=""
+            />
+          </div>
 
-        <div
-          className="
+          <div
+            className="
           h-56
           mx-4
           w-5/6
@@ -72,11 +79,11 @@ const Contact = () => {
           shadow-md
           sm:w-80 sm:mx-0
         "
-        >
-          <div className="h-1/2 w-full flex justify-between items-baseline px-3 py-5"></div>
+          >
+            <div className="h-1/2 w-full flex justify-between items-baseline px-3 py-5"></div>
 
-          <div
-            className="
+            <div
+              className="
             bg-white
             h-auto
             w-full
@@ -86,20 +93,42 @@ const Contact = () => {
             items-center
             shadow-xl
           "
-          >
-            <div className="w-full h-1/2 mt-12 mb-6 px-2 flex flex-col justify-center items-center space-y-1">
-              <h1 className="font-bold">Ayan Kumar Das</h1>
-              <h1 className="text-gray-700 text-sm">Email: <a href="mailto:ayankumar.akd@gmail.com">ayankumar.akd@gmail.com</a></h1>
-              <h1 className="text-gray-700 text-sm">
-                Phone: +8801686509495
-              </h1>
-              <h1 className="text-gray-700 text-sm text-justify">
-                Address: Rangpur, Bangladesh
-              </h1>
+            >
+              <div className="w-full h-1/2 mt-12 mb-6 px-2 flex flex-col justify-center items-center space-y-1">
+                <h1 className="font-bold">Ayan Kumar Das</h1>
+                <h1 className="text-gray-700 text-sm flex items-center gap-1">
+                  <MdEmail />
+                  <a href="mailto:ayankumar.akd@gmail.com">
+                    ayankumar.akd@gmail.com
+                  </a>
+                </h1>
+                <h1 className="text-gray-700 text-sm flex items-center gap-1">
+                  <MdOutlinePhoneInTalk /> (+88) 01686509495
+                </h1>
+                <h1 className="text-gray-700 text-sm text-justify flex items-center gap-1">
+                  <MdOutlineLocationOn /> Rangpur, Bangladesh
+                </h1>
+                <div className="grid grid-flow-col gap-4 text-3xl pt-2 text-pinky">
+                  <a target="_blank" href="https://www.facebook.com/akd444/">
+                    <FaFacebook></FaFacebook>
+                  </a>
+                  <a target="_blank" href="https://www.instagram.com/akd420v2/">
+                    <FaInstagram></FaInstagram>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/ayan-kumar-akd/"
+                  >
+                    <FaLinkedin></FaLinkedin>
+                  </a>
+                  <a target="_blank" href="https://github.com/ayan-akd">
+                    <FaGithub></FaGithub>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
         <div className="py-12 flex flex-col lg:flex-row gap-6 space-y-5">
           <form
             onSubmit={handleSubmit}
