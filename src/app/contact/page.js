@@ -165,7 +165,7 @@ const Contact = () => {
         </div>
         </div>
         <div className="pb-12">
-          <h1 className="text-center text-white text-3xl mb-5">My Location</h1>
+          <h1 className="text-center text-white text-3xl mb-5 font-bold">My Location</h1>
             <Map position={[25.745132, 89.255494]} popUp={"Ayan"}></Map>
           </div>
       </CustomContainer>
