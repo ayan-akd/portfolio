@@ -48,7 +48,7 @@ const Contact = () => {
           Get in Touch
         </h1>
         <h1 className="text-white text-center text-5xl font-bold">
-          Let’s discuss about an project!
+          Let’s discuss about a <span className="text-pinky font-bold">project!</span>
         </h1>
         <div className="py-12 flex flex-col lg:flex-row gap-6 space-y-5">
           <form
@@ -78,7 +78,7 @@ const Contact = () => {
               isRequired
             />
             <div className="flex gap-2 justify-end">
-              <Button type="submit" fullWidth color="primary">
+              <Button type="submit" fullWidth color="danger">
                 Send
               </Button>
             </div>

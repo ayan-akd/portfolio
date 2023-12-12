@@ -17,6 +17,7 @@ import vscode from "./../assets/icons/vscode.png";
 import mongodb from "./../assets/icons/mongodb.png";
 import git from "./../assets/icons/git.png";
 import mysql from "./../assets/icons/mysql.png";
+import next from "./../assets/icons/next.svg";
 import lott from "./../assets/lottie2.json";
 import Image from "next/image";
 import Lottie from "lottie-react";
@@ -36,7 +37,7 @@ const Skills = () => {
           </div>
           <div className="lg:w-8/12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center pb-12">
             <div className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-96 flex flex-col items-center justify-center">
-              <h3 className="text-2xl mb-5">Frontend</h3>
+              <h3 className="text-2xl mb-5 text-pinky font-bold">Frontend</h3>
               <div className="flex flex-wrap gap-6 items-center justify-center">
                 <motion.div
                   whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
@@ -73,10 +74,17 @@ const Skills = () => {
                   <Image className="w-10" src={react} alt="" />
                   <p>React.JS</p>
                 </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+                  className="flex items-center justify-center flex-col gap-1"
+                >
+                  <Image className="w-16" src={next} alt="" />
+                  <p>Next.js</p>
+                </motion.div>
               </div>
             </div>
             <div className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-96 flex flex-col items-center justify-center">
-              <h3 className="text-2xl mb-5">Backend</h3>
+              <h3 className="text-2xl mb-5 text-pinky font-bold">Backend</h3>
               <div className="flex flex-wrap gap-6 items-center justify-center">
                 <motion.div
                   whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
@@ -109,7 +117,7 @@ const Skills = () => {
               </div>
             </div>
             <div className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-96 flex flex-col items-center justify-center">
-              <h3 className="text-2xl mb-5">Tools</h3>
+              <h3 className="text-2xl mb-5 text-pinky font-bold">Tools</h3>
               <div className="flex flex-wrap gap-6 items-center justify-center">
                 <motion.div
                   whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
@@ -156,7 +164,7 @@ const Skills = () => {
               </div>
             </div>
             <div className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-96 flex flex-col items-center justify-center">
-              <h3 className="text-2xl mb-5">Database</h3>
+              <h3 className="text-2xl mb-5 text-pinky font-bold">Database</h3>
               <div className="flex flex-wrap gap-6 items-center justify-center">
                 <motion.div
                   whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}

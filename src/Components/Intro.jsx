@@ -30,11 +30,11 @@ const Intro = () => {
           <div className="md:order-1 order-2 text-center md:text-start lg:pl-20">
             <h1 className="text-5xl font-bold">Hi, I'm Ayan Kumar Das</h1>
             <h3 className="text-4xl font-semibold mt-2">
-              A MERN Stack Developer
+              A MERN Stack <span className="drop-shadow-glow text-pinky font-bold">Developer</span>
             </h3>
             <div className="flex lg:justify-start flex-wrap justify-center items-center gap-1 my-5">
               <Button
-                color="primary"
+                color="danger"
                 onClick={handleDownloadClick}
               >
                 <MdOutlineFileDownload />
@@ -42,7 +42,7 @@ const Intro = () => {
               </Button>
               <Link href={'/projects'}>
                 <Button
-                  color="primary"
+                  color="danger"
                 >
                   See Projects
                   <FaArrowRight />
@@ -50,7 +50,7 @@ const Intro = () => {
               </Link>
               <Link href={'/contact'}>
                 <Button
-                  color="primary"
+                  color="danger"
                 >
                   <MdContactPhone />
                   Contact
@@ -58,7 +58,7 @@ const Intro = () => {
               </Link>
             </div>
           </div>
-          <div className="md:order-2 order-1 flex items-center justify-center">
+          <div className="md:order-2 order-1 flex items-center justify-center drop-shadow-glow">
             <Image className="rounded-full lg:w-3/4" src={photo} alt="" />
           </div>
         </div>

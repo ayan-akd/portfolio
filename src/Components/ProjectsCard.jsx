@@ -1,10 +1,10 @@
 "use client";
 import Slider from "./Slider";
-import { Chip, link } from "@nextui-org/react";
+import { Chip } from "@nextui-org/react";
 const ProjectsCard = ({ images, tech, data }) => {
   return (
     <div className="text-white max-w-screen-2xl mx-auto">
-      <h1 className="text-3xl text-center mb-5">{data.title}</h1>
+      <h1 className="text-3xl text-center mb-5 text-pinky font-bold">{data.title}</h1>
       <Slider images={images}></Slider>
       <p className="py-2">
         {data.description}

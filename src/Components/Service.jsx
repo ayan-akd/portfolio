@@ -14,12 +14,7 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center">
           <div>
             <p className="text-gray-300 md:text-start text-center">
-              I'm passionate about creating web applications that not only meet
-              the technical requirements but also deliver a seamless and
-              enjoyable user experience. With a strong foundation in HTML, CSS,
-              React.js, Node.js, MongoDB, Mongoose, Tailwind CSS, Firebase
-              Authentication, and JWT, I strive to contribute to dynamic web
-              development teams.
+              I'm passionate about developing web applications that meet technical requirements and deliver delightful user experiences. Proficient in HTML, CSS, React.js, Node.js, MongoDB, Mongoose, Tailwind CSS, Firebase Authentication, and JWT. Experienced in writing clean and maintainable code, working in a collaborative environment, and agile methodologies. Committed to staying up-to-date with the latest developments and best practices in the field.
             </p>
           </div>
           <div className="space-y-2 mb-5">
@@ -46,6 +41,8 @@ const Services = () => {
             </h3>
             <h3>SSC and HSC : Cantonment Public School and College, Rangpur</h3>
             <hr />
+            <h3>Phone: (+88) 01686509495</h3>
+            <hr />
             <h3>Location: Rangpur, Bangladesh</h3>
             <hr />
           </div>
@@ -58,10 +55,10 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-center justify-center mb-12">
             <motion.div
               whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-              className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-72 flex flex-col items-center justify-center"
+              className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-72 flex flex-col items-center justify-center drop-shadow-glow"
             >
-              <h1 className="font-bold text-3xl">{"</>"}</h1>
-              <h3 className="text-2xl my-2">Web Design</h3>
+              <h1 className="font-bold text-3xl text-pinky">{"</>"}</h1>
+              <h3 className="text-2xl my-2 font-bold">Web Design</h3>
               <p className="text-gray-300">
                 As a web designer, I combine creativity and technical skills to
                 craft visually appealing and user-friendly websites.I can
@@ -71,10 +68,10 @@ const Services = () => {
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-              className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-72 flex flex-col items-center justify-center"
+              className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-72 flex flex-col items-center justify-center drop-shadow-glow"
             >
-              <h1 className="font-bold text-3xl">{"</>"}</h1>
-              <h3 className="text-2xl my-2">Frontend Web Development</h3>
+              <h1 className="font-bold text-3xl text-pinky">{"</>"}</h1>
+              <h3 className="text-2xl my-2 font-bold">Frontend Web Development</h3>
               <p className="text-gray-300">
                 As a frontend web developer, I specialize in building robust and
                 interactive websites that seamlessly integrate functionality and
@@ -83,10 +80,10 @@ const Services = () => {
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-              className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-72 flex flex-col items-center justify-center"
+              className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-72 flex flex-col items-center justify-center drop-shadow-glow"
             >
-              <h1 className="font-bold text-3xl">{"</>"}</h1>
-              <h3 className="text-2xl my-2">Full Stack Development</h3>
+              <h1 className="font-bold text-3xl text-pinky">{"</>"}</h1>
+              <h3 className="text-2xl my-2 font-bold">Full Stack Development</h3>
               <p className="text-gray-300">
                 Along with the Frontend I am skilled in Node JS, Express, JWT.
                 Proficient in implementing Mongo DB database. More than 6 months

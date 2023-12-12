@@ -44,7 +44,7 @@ const NavbarC = () => {
             <Link
               href={item.to}
               className={`text-white ${
-                router === item.to ? "font-bold" : ""
+                router === item.to ? "font-bold text-pinky" : ""
               }`}
             >
               {item.label}
@@ -61,7 +61,7 @@ const NavbarC = () => {
             <Link
               href={item.to}
               className={`text-foreground ${
-                router === item.to ? "font-bold" : ""
+                router === item.to ? "font-bold text-pinky" : ""
               }`}
             >
               {item.label}
