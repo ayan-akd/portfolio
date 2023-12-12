@@ -7,7 +7,11 @@ import { Helmet } from "react-helmet-async";
 const Home = () => {
   return (
     <div className="bg-gradient-to-r from-gray-800 via-gray-900 to-black">
-      <Helmet>Portfolio | Ayan Kumar Das</Helmet>
+      <Helmet>
+        <title>Portfolio | Ayan Kumar Das</title>
+        <meta name="description" content="Portfolio of Ayan Kumar Das" />
+        <link rel="icon" type="image/png" href="favicon.png" sizes="16x16" />
+      </Helmet>
       <Intro></Intro>
       <Services></Services>
       <Skills></Skills>

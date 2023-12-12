@@ -4,9 +4,14 @@ import { Button } from '@nextui-org/react'
 import Lottie from 'lottie-react'
 import Link from 'next/link'
 import lott from "./../assets/lottie.json"
+import { Helmet } from 'react-helmet-async'
 export default function NotFound() {
   return (
     <div className="bg-gradient-to-r from-gray-800 via-gray-900 to-black h-screen text-white">
+      <Helmet>
+        <title>404 | Ayan Kumar Das</title>
+        <meta name="description" content="404 Page of Ayan Kumar Das" />
+      </Helmet>
      <CustomContainer>
      <div className=" text-center">
           <div className="mb-5">
