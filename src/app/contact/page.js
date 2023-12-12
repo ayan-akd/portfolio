@@ -59,8 +59,42 @@ const Contact = () => {
           Let’s discuss about a{" "}
           <span className="text-pinky font-bold">project!</span>
         </h1>
-        {/* profile section  */}
-        <div className="w-full my-12 flex justify-center ">
+        
+        <div className="py-12 flex flex-col-reverse justify-center md:flex-row gap-6 space-y-5">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-4 h-[400px] mt-32 md:mt-4 md:w-8/12 lg:w-4/12 w-full"
+          >
+            <Input
+              name="name"
+              isRequired
+              label="Name"
+              placeholder="Enter your name"
+              type="text"
+            />
+            <Input
+              name="email"
+              isRequired
+              label="Email"
+              placeholder="Enter your email"
+              type="email"
+            />
+            <Textarea
+              name="message"
+              minRows={5}
+              variant="faded"
+              label="Message"
+              placeholder="Enter your Message"
+              isRequired
+            />
+            <div className="flex gap-2 justify-end">
+              <Button type="submit" fullWidth color="danger">
+                Send
+              </Button>
+            </div>
+          </form>
+          {/* profile section  */}
+        <div className="md:w-4/12 w-full my-12 flex justify-center ">
           <div className="h-56 w-72 absolute flex justify-center items-center">
             <Image
               className="object-cover h-20 w-20 rounded-full"
@@ -94,7 +128,7 @@ const Contact = () => {
             shadow-xl
           "
             >
-              <div className="w-full h-1/2 mt-12 mb-6 px-2 flex flex-col justify-center items-center space-y-1">
+              <div className="w-full mt-12 mb-6 px-2 flex flex-col justify-center items-center space-y-1">
                 <h1 className="font-bold">Ayan Kumar Das</h1>
                 <h1 className="text-gray-700 text-sm flex items-center gap-1">
                   <MdEmail />
@@ -129,43 +163,11 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="py-12 flex flex-col lg:flex-row gap-6 space-y-5">
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-4 h-[400px] mt-4 lg:w-1/2"
-          >
-            <Input
-              name="name"
-              isRequired
-              label="Name"
-              placeholder="Enter your name"
-              type="text"
-            />
-            <Input
-              name="email"
-              isRequired
-              label="Email"
-              placeholder="Enter your email"
-              type="email"
-            />
-            <Textarea
-              name="message"
-              minRows={5}
-              variant="faded"
-              label="Message"
-              placeholder="Enter your Message"
-              isRequired
-            />
-            <div className="flex gap-2 justify-end">
-              <Button type="submit" fullWidth color="danger">
-                Send
-              </Button>
-            </div>
-          </form>
-          <div className=" lg:w-1/2">
+        </div>
+        <div className="pb-12">
+          <h1 className="text-center text-white text-3xl mb-5">My Location</h1>
             <Map position={[25.745132, 89.255494]} popUp={"Ayan"}></Map>
           </div>
-        </div>
       </CustomContainer>
     </div>
   );

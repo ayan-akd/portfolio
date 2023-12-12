@@ -24,7 +24,7 @@ const Map = ({ position, popUp }) => {
   return (
     <MapContainer
       center={position}
-      zoom={15}
+      zoom={12}
       scrollWheelZoom={true}
       style={{
         width: "100%",
