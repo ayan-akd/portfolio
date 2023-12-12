@@ -10,6 +10,8 @@ import wander3 from "@/assets/wander/image_71.png";
 import techno1 from "@/assets/techno/image_72.png";
 import techno2 from "@/assets/techno/image_73.png";
 import techno3 from "@/assets/techno/image_74.png";
+import { motion as m} from "framer-motion";
+
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const Projects = () => {
@@ -96,30 +98,48 @@ const Projects = () => {
         <link rel="icon" type="image/svg" href="favicon.svg" sizes="16x16" />
       </Helmet>
       <CustomContainer>
-        <h1 className="text-white text-center text-5xl mt-16 pb-12 font-bold">
+        <m.h1 
+        initial={{ opacity: 0, scale: 0, y: -500 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.75 }}
+        className="text-white text-center text-5xl mt-16 pb-12 font-bold">
           My Projects
-        </h1>
-        <div>
+        </m.h1>
+        <m.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.75, delay: 0.5 }}
+        >
           <ProjectsCard
             data={mediData}
             tech={mediTech}
             images={mediImages}
           ></ProjectsCard>
-        </div>
-        <div className="mt-10">
+        </m.div>
+        <m.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.75 }}
+        viewport={{once: true}}
+        className="mt-10">
           <ProjectsCard
             data={wanderData}
             tech={wanderTech}
             images={wanderImages}
           ></ProjectsCard>
-        </div>
-        <div className="mt-10">
+        </m.div>
+        <m.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.75 }}
+        viewport={{once: true}}
+        className="mt-10">
           <ProjectsCard
             data={technoData}
             tech={technoTech}
             images={technoImages}
           ></ProjectsCard>
-        </div>
+        </m.div>
       </CustomContainer>
     </div>
   );

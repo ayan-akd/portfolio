@@ -22,20 +22,33 @@ import lott from "./../assets/lottie2.json";
 import Image from "next/image";
 import Lottie from "lottie-react";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const Skills = () => {
+  const [inViewRef, inView]= useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  })
   return (
     <div className="text-white pt-20">
       <CustomContainer>
-        <div className="flex flex-col lg:flex-row">
-          <div className="lg:w-4/12 flex flex-col justify-center items-center">
+        <div ref={inViewRef} className="flex flex-col lg:flex-row overflow-hidden">
+          <motion.div
+          initial={{ opacity: 0, scale: 0, x: -500 }}
+          animate={inView ? { opacity: 1, scale: 1, x: 0 } : {}}
+          transition={{ duration: 0.75 }}
+          className="lg:w-4/12 flex flex-col justify-center items-center">
             <h1 className="md:text-start text-center text-5xl mt-16 pb-12 font-bold">
               My Skills
             </h1>
             <div className="lg:w-auto md:w-2/4">
               <Lottie animationData={lott} />
             </div>
-          </div>
-          <div className="lg:w-8/12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center pb-12">
+          </motion.div>
+          <motion.div
+          initial={{ opacity: 0, scale: 0, x: 500 }}
+          animate={inView ? { opacity: 1, scale: 1, x: 0 } : {}}
+          transition={{ duration: 0.75 }}
+          className="lg:w-8/12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center pb-12">
             <div className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-96 flex flex-col items-center justify-center">
               <h3 className="text-2xl mb-5 text-pinky font-bold">Frontend</h3>
               <div className="flex flex-wrap gap-6 items-center justify-center">
@@ -83,7 +96,11 @@ const Skills = () => {
                 </motion.div>
               </div>
             </div>
-            <div className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-96 flex flex-col items-center justify-center">
+            <motion.div
+            initial={{ opacity: 0, scale: 0, x: 500 }}
+            animate={inView ? { opacity: 1, scale: 1, x: 0 } : {}}
+            transition={{ duration: 0.75, delay: 0.25 }}
+            className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-96 flex flex-col items-center justify-center">
               <h3 className="text-2xl mb-5 text-pinky font-bold">Backend</h3>
               <div className="flex flex-wrap gap-6 items-center justify-center">
                 <motion.div
@@ -115,8 +132,12 @@ const Skills = () => {
                   <p>JWT Authentication</p>
                 </motion.div>
               </div>
-            </div>
-            <div className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-96 flex flex-col items-center justify-center">
+            </motion.div>
+            <motion.div
+            initial={{ opacity: 0, scale: 0, x: 500 }}
+            animate={inView ? { opacity: 1, scale: 1, x: 0 } : {}}
+            transition={{ duration: 0.75, delay: 0.5 }}
+            className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-96 flex flex-col items-center justify-center">
               <h3 className="text-2xl mb-5 text-pinky font-bold">Tools</h3>
               <div className="flex flex-wrap gap-6 items-center justify-center">
                 <motion.div
@@ -162,8 +183,12 @@ const Skills = () => {
                   <p>VS Code</p>
                 </motion.div>
               </div>
-            </div>
-            <div className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-96 flex flex-col items-center justify-center">
+            </motion.div>
+            <motion.div
+            initial={{ opacity: 0, scale: 0, x: 500 }}
+            animate={inView ? { opacity: 1, scale: 1, x: 0 } : {}}
+            transition={{ duration: 0.75, delay: 0.75 }}
+            className="bg-gray-700 p-5 rounded-lg shadow-lg text-center h-96 flex flex-col items-center justify-center">
               <h3 className="text-2xl mb-5 text-pinky font-bold">Database</h3>
               <div className="flex flex-wrap gap-6 items-center justify-center">
                 <motion.div
@@ -181,8 +206,8 @@ const Skills = () => {
                   <p>MySQL</p>
                 </motion.div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </CustomContainer>
     </div>
