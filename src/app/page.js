@@ -10,7 +10,7 @@ const Home = () => {
       <Helmet>
         <title>Portfolio | Ayan Kumar Das</title>
         <meta name="description" content="Portfolio of Ayan Kumar Das" />
-        <link rel="icon" type="image/png" href="favicon.png" sizes="16x16" />
+        <link rel="icon" type="image/svg" href="favicon.svg" sizes="16x16" />
       </Helmet>
       <Intro></Intro>
       <Services></Services>
