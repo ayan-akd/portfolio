@@ -28,7 +28,6 @@ const Projects = () => {
     Express: "Express",
     Firebase: "Firebase",
     JWT: "JWT",
-    MongoDB: "MongoDB",
     Mongoose: "Mongoose",
     Stripe: "Stripe",
   };
