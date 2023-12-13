@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import CustomContainer from "./CustomContainer";
 import photo from "./../assets/profile-pic.png";
 import { motion as m, useMotionValue, useTransform } from "framer-motion";
@@ -14,35 +14,30 @@ import Link from "next/link";
 const Intro = () => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const rotateX = useTransform(y, [-100, 100], [10, -10]);
-  const rotateY = useTransform(x, [-100, 100], [-10, 10]);
-  const tiltRef = useRef(null);
+  const [tiltX, setTiltX] = useState(0);
+  const [tiltY, setTiltY] = useState(0);
 
-  const updateTilt = useCallback((event) => {
+  const handleMouseMove = (event) => {
     const { clientX, clientY } = event;
-    const rect = tiltRef.current.getBoundingClientRect();
+    const rect = event.currentTarget.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
 
     const deltaX = clientX - centerX;
     const deltaY = clientY - centerY;
 
-    const tiltX = deltaY / centerY;
-    const tiltY = deltaX / centerX;
+    const maxTilt = 20;
 
-    x.set(tiltX * 20); // Adjust the multiplier based on the desired tilt range
-    y.set(-tiltY * 20); // Adjust the multiplier based on the desired tilt range
-  }, []);
+    const tiltX = (deltaY / centerY) * maxTilt;
+    const tiltY = -(deltaX / centerX) * maxTilt;
 
-  useEffect(() => {
-    const element = tiltRef.current;
-
-    element.addEventListener("mousemove", updateTilt);
-
-    return () => {
-      element.removeEventListener("mousemove", updateTilt);
-    };
-  }, [updateTilt]);
+    setTiltX(tiltX);
+    setTiltY(tiltY);
+  };
+  const resetTilt = () => {
+   setTiltX(0);
+    setTiltY(0);
+  };
   const handleDownloadClick = () => {
     const dummyAnchor = document.createElement("a");
     dummyAnchor.download = "Ayan_Kumar_Das_Resume.pdf";
@@ -119,15 +114,19 @@ const Intro = () => {
           </div>
           <div className="md:order-2 order-1" style={{ perspective: 2000 }}>
             <m.div
-              style={{ x, y, rotateX, rotateY, z: 100 }}
+              style={{ x, y, rotateX: tiltX, rotateY: tiltY, z: 100 }}
               drag
               dragElastic={0.16}
               dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
               whileTap={{ cursor: "grabbing" }}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
+              whileHover={{
+                transition: { duration: 0.5, ease: "easeInOut" },
+              }}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={resetTilt}
               transition={{ duration: 0.75, delay: 0.5 }}
-              ref={tiltRef}
               className="flex items-center justify-center drop-shadow-glow"
             >
               <Image className="rounded-full lg:w-3/4" src={photo} alt="" />
