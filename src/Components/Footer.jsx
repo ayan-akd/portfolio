@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import { motion as m } from "framer-motion";
 const Footer = () => {
   return (
     <div className="bg-gray-700 text-white text-center min-h-[100px] pb-10">
@@ -9,18 +10,26 @@ const Footer = () => {
             Social <span className="font-semibold text-pinky">Links</span>
           </header>
           <div className="grid grid-flow-col gap-4 text-3xl text-pinky">
-            <a target="_blank" href="https://www.facebook.com/akd444/">
+            <m.a
+            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+            target="_blank" href="https://www.facebook.com/akd444/">
               <FaFacebook></FaFacebook>
-            </a>
-            <a target="_blank" href="https://www.instagram.com/akd420v2/">
+            </m.a>
+            <m.a 
+            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+            target="_blank" href="https://www.instagram.com/akd420v2/">
               <FaInstagram></FaInstagram>
-            </a>
-            <a target="_blank" href="https://www.linkedin.com/in/ayan-kumar-akd/">
+            </m.a>
+            <m.a
+            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+            target="_blank" href="https://www.linkedin.com/in/ayan-kumar-akd/">
               <FaLinkedin></FaLinkedin>
-            </a>
-            <a target="_blank" href="https://github.com/ayan-akd">
+            </m.a>
+            <m.a
+            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+            target="_blank" href="https://github.com/ayan-akd">
               <FaGithub></FaGithub>
-            </a>
+            </m.a>
           </div>
         </nav>
       </div>

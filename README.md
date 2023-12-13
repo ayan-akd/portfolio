@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project built with [`Next UI`](https://nextui.org/).
+This is a [Next.js](https://nextjs.org/) project built with [`NextUI`](https://nextui.org/).
 
 ## Features
 

@@ -158,24 +158,34 @@ const Contact = () => {
                     <MdOutlineLocationOn /> Rangpur, Bangladesh
                   </h1>
                   <div className="grid grid-flow-col gap-4 text-3xl pt-2 text-pinky">
-                    <a target="_blank" href="https://www.facebook.com/akd444/">
+                    <motion.a
+                      whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+                      target="_blank"
+                      href="https://www.facebook.com/akd444/"
+                    >
                       <FaFacebook></FaFacebook>
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
+                      whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
                       target="_blank"
                       href="https://www.instagram.com/akd420v2/"
                     >
                       <FaInstagram></FaInstagram>
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
+                      whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
                       target="_blank"
                       href="https://www.linkedin.com/in/ayan-kumar-akd/"
                     >
                       <FaLinkedin></FaLinkedin>
-                    </a>
-                    <a target="_blank" href="https://github.com/ayan-akd">
+                    </motion.a>
+                    <motion.a
+                      whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+                      target="_blank"
+                      href="https://github.com/ayan-akd"
+                    >
                       <FaGithub></FaGithub>
-                    </a>
+                    </motion.a>
                   </div>
                 </div>
               </div>
@@ -186,7 +196,7 @@ const Contact = () => {
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.75 }}
-          viewport={{once: true}}
+          viewport={{ once: true }}
           className="pb-12"
         >
           <h1 className="text-center text-white text-3xl mb-5 font-bold">
