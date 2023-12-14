@@ -20,7 +20,13 @@ export const POST = async (req) => {
       from: email,
       to: localEmail,
       subject: ` New Contact From Portfolio by ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      html: `<html>
+      <body>
+      <h4>Name: ${name}</h4>
+      <h4>Email: ${email}</h4>
+      <h4>Message: <p>${message}</p></h4>
+      </body>
+      </html>`,
     };
 
     await transporter.sendMail(mailOptions);
