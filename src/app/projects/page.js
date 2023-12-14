@@ -32,6 +32,7 @@ const Projects = () => {
     JWT: "JWT",
     Mongoose: "Mongoose",
     Stripe: "Stripe",
+    Nodemailer: "Nodemailer",
   };
   const mediData = {
     title: "Medicamp",
